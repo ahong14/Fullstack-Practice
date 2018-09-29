@@ -14,6 +14,13 @@ var WishList = require('./models/wishlist');
 app.use(bodyParser.json()); //want to use json, parses for json
 app.use(bodyParser.urlencoded({extended: false})); //shallow parsing (false)
 
+//enable CORS
+app.use(function(req, res, next) {
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+	next();
+});
+
 //create new record
 app.post('/product', function (request, response){
 
@@ -106,6 +113,6 @@ app.put('/wishlist/product/add', function(request, response){
 
 
 //listen to requests on port
-app.listen(8080, function(){
-	console.log('server running on 8080');
+app.listen(3004, function(){
+	console.log('server running on 3004');
 });
