@@ -48,7 +48,7 @@ class App extends Component {
     //list contains divs containing Product components
     const list = this.state.products.map((product) =>
         <div className = "col-sm-4 product" key = {product._id}>
-          <Product title = {product.title} price = {product.price} imgURL = {product.imgUrl}/>
+          <Product product = {product}/>
         </div>
     );
 

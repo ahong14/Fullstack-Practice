@@ -4,9 +4,9 @@ import './product_condensed.css';
 class ProductCondensed extends Component{
     render(){
         return(
-            <li className = "list group-item">
+            <li className = "list-group-item pc-condensed">
                 <a className = "btn btn-outline-danger"> X </a>
-                <p>{this.props.product.title} | {this.props.product.price} </p>
+                <p>{this.props.product.title} | ${this.props.product.price} </p>
             </li>
         );
     }
